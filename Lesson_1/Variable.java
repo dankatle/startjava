@@ -3,8 +3,8 @@ public class Variable {
 	public static void main(String[] args) {
 		byte coreProcessor = 2;
 		short threadsProcessor = 4;
-		int sizeRAM = 8;
-		long maxSizeSsdInGb = 256;
+		int sizeRam = 8;
+		long maxSizeSsdGb = 256;
 		float maxFrequencyCpu = 3.7f;
 		double minFrequencyCpu = 1.6;
 		char markingIntelCpu = 'i';
@@ -19,5 +19,4 @@ public class Variable {
 		System.out.println(markingIntelCpu);
 		System.out.println(haveHDD);
 	}
-
 }
