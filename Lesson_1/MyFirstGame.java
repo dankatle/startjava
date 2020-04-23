@@ -11,6 +11,6 @@ public class MyFirstGame {
 			}
 			myNumber++;
 		} while (myNumber != randomNumber);
-	   System.out.println("Вы угадали число");
+	   	System.out.println("Вы угадали число");
 	}
 }
