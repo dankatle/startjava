@@ -2,9 +2,9 @@ public class Calculator {
 
 	public static void main(String[] args) {
 		int a = 34;
-		int b = 2;
+		int b = 4;
 		int result = 0;
-		char sign = '/';
+		char sign = '^';
 
 		if (sign == '+') {
 			result = a + b;
@@ -22,10 +22,11 @@ public class Calculator {
 			result = a % b;
 			System.out.println("Остаток от деление равен - " + result);
 		} else if (sign == '^') {
+			int resultPow = 1;
 			for (int i = 0; i < b ; i++) {
-				result = a * a;
+				resultPow = resultPow * a;
 			}
-			System.out.println("Возведение чисел в степень равно - " + result);
+			System.out.println("Возведение чисел в степень равно - " + resultPow);
 		} else {
 			System.out.println("Невозможно выполнить данную операцию");
 		}
