@@ -24,7 +24,7 @@ public class Calculator {
 		} else if (sign == '^') {
 			int resultPow = 1;
 			for (int i = 0; i < b ; i++) {
-				resultPow = resultPow * a;
+				resultPow *= a;
 			}
 			System.out.println("Возведение чисел в степень равно - " + resultPow);
 		} else {
