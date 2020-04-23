@@ -6,10 +6,11 @@ public class MyFirstGame {
 		do {
 			if (myNumber < randomNumber) {
 				System.out.println("Введеное вами число меньше того, которое загадал компьютер");
+				myNumber++;
 			} else if (myNumber > randomNumber) {
 				System.out.println("Введеное вами число больше того, которое загадал компьютер");
+				myNumber--;
 			}
-			myNumber++;
 		} while (myNumber != randomNumber);
 	   	System.out.println("Вы угадали число");
 	}
