@@ -6,7 +6,7 @@ public class Calculator {
 		int result = 0;
 		char sign = '/';
 
-		if (sign == '+')	{
+		if (sign == '+') {
 			result = a + b;
 			System.out.println("Сумма двух чисел равна - " + result);
 		} else if (sign == '-') {
