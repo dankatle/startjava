@@ -1,5 +1,5 @@
 public class MyFirstGame {
-	
+
 	public static void main(String[] args) {
 		int randomNumber = 82;
 		int myNumber = 0;
@@ -11,6 +11,6 @@ public class MyFirstGame {
 			}
 			myNumber++;
 		} while (myNumber != randomNumber);
-	    System.out.println("Вы угадали число");
+	   System.out.println("Вы угадали число");
 	}
 }
