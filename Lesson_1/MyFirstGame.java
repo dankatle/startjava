@@ -1,5 +1,5 @@
 public class MyFirstGame {
-
+	
 	public static void main(String[] args) {
 		int randomNumber = 82;
 		int myNumber = 0;
