@@ -4,7 +4,7 @@ public class WolfTest {
 		Wolf wolf = new Wolf();
 		wolf.setGender('M');
 		wolf.setName("Borz");
-		wolf.setWeight(8.88f);
+		wolf.setWeight(8.78f);
 		wolf.setAge(5);
 		wolf.setColor("Black");
 
