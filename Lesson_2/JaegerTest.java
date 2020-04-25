@@ -1,31 +1,8 @@
 public class JaegerTest {
 	
 	public static void main(String[] args) {
-		Jaeger gipsy = new Jaeger();
-
-		gipsy.setName("Gipsy Danger");
-		gipsy.setMark("Mark - 3");
-		gipsy.setOrigin("USA");
-		gipsy.setHeight(79.25f);
-		gipsy.setWeight(1.980f);
-		gipsy.setSpeed(7);
-		gipsy.setStrength(8);
-		gipsy.setArmor(6);
-		gipsy.setWeapons("I-19 Plasmacaster and GD6 Chain Sword");
-		gipsy.setBodyLanguage("Street Fighter");
-
-		Jaeger striker = new Jaeger();
-
-		striker.setName("Striker Eureka");
-		striker.setMark("Mark-5");
-		striker.setOrigin("Australia");
-		striker.setHeight(76.2f);
-		striker.setWeight(1.850f);
-		striker.setSpeed(10);
-		striker.setStrength(10);
-		striker.setArmor(9);
-		striker.setWeapons("Assault Mount 3.25 and WMB2x90 AKM Chest launcher");
-		striker.setBodyLanguage("Dirty Boxer");
+		Jaeger gipsy = new Jaeger("Gipsy Danger", "Mark - 3", "USA", 79.25f, 1.980f, 7, 8, 6, "I-19 Plasmacaster and GD6 Chain Sword", "Street Fighter");
+		Jaeger striker = new Jaeger("Striker Eureka", "Mark-5", "Australia", 76.2f, 1.850f, 10, 10, 9, "Assault Mount 3.25 and WMB2x90 AKM Chest launcher", "Dirty Boxer");
 
 		System.out.println("Имя егеря gipsy - " + gipsy.getName() + ", Mark - " + gipsy.getMark() + ", происхождение - " + gipsy.getOrigin() + ", рост в м. - " + gipsy.getHeight() + 
 			", вес в тоннах - " + gipsy.getWeight() + ", скорость - " + gipsy.getSpeed() + ", сила -  " + gipsy.getStrength() + ", защита - " + gipsy.getArmor() + 

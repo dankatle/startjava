@@ -1,33 +1,33 @@
 public class Calculator {
 
-	public void startCalculator(int a, char sign, int b) {
+	public void calculate(int firstNumber, char sign, int secondNumber) {
 		int result = 0;
-		
+
 		switch (sign) {
 			case '+':
-				result = a + b;
+				result = firstNumber + secondNumber;
 				System.out.println("Сумма двух чисел равна - " + result);
 				break;
 			case '-':
-				result = a - b;
+				result = firstNumber - secondNumber;
 				System.out.println("Разность двух чисел равна - " + result);
 				break;
 			case '*':
-				result = a * b;
+				result = firstNumber * secondNumber;
 				System.out.println("Произведение двух чисел равно - " + result);
 				break;
 			case '/':
-				result = a / b;
+				result = firstNumber / secondNumber;
 				System.out.println("Частное двух чисел равно - " + result);
 				break;
 			case '%':
-				result = a % b;
+				result = firstNumber % secondNumber;
 				System.out.println("Остаток от деление равен - " + result);
 				break;
 			case '^':
 				int resultPow = 1;
-				for (int i = 0; i < b ; i++) {
-		 			resultPow *= a;
+				for (int i = 0; i < secondNumber ; i++) {
+		 			resultPow *= firstNumber;
 				}
 				System.out.println("Возведение чисел в степень равно - " + resultPow);
 			default:

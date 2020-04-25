@@ -18,10 +18,17 @@ public class GuessNumberTest {
 		GuessNumber guess = new GuessNumber(p1, p2);
 
 		do {
-			guess.gameStart();
+			do {
+				guess.startGame();
 
-			System.out.println("Хотите продолжить? [да/нет]");
-			answer = scn.next();
+				System.out.println("Хотите продолжить? [да/нет]");
+				answer = scn.next();
+			} while (answer.equalsIgnoreCase("да"));
+
+			if (!"да".equalsIgnoreCase(answer) && !"нет".equalsIgnoreCase(answer)){
+				System.out.println("Хотите продолжить? [да/нет]");
+				answer = scn.next();
+			}
 		} while (answer.equalsIgnoreCase("да"));
 	}
 }

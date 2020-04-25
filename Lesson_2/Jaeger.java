@@ -11,6 +11,19 @@ public class Jaeger {
 	private String weapons;
 	private String bodyLanguage;
 
+	public Jaeger(String name, String mark, String origin, float height, float weight, int speed, int strength, int armor, String weapons, String bodyLanguage) {
+		this.name = name;
+		this.mark = mark;
+		this.origin = origin;
+		this.height = height;
+		this.weight = weight;
+		this.speed = speed;
+		this.strength = strength;
+		this.armor = armor;
+		this.weapons = weapons;
+		this.bodyLanguage = bodyLanguage;
+	}
+
 	public String getName() {
 		return name;
 	}
