@@ -23,7 +23,7 @@ public class Wolf {
 		return "Wo-wo";
 	}
 
-	boolean hunting() {
+	boolean hunt() {
 		System.out.println("Режим охоты включен!");
 		return true;
 	}
