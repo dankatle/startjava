@@ -18,9 +18,9 @@ public class GuessNumberTest {
 		GuessNumber guess = new GuessNumber(p1, p2);
 
 		do {
+			guess.startGame();
+			
 			do {
-				guess.startGame();
-
 				System.out.println("Хотите продолжить? [да/нет]");
 				answer = scn.next();
 			} while (!answer.equalsIgnoreCase("да") && !answer.equalsIgnoreCase("нет"));
