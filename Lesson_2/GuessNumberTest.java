@@ -23,12 +23,9 @@ public class GuessNumberTest {
 
 				System.out.println("Хотите продолжить? [да/нет]");
 				answer = scn.next();
-			} while (answer.equalsIgnoreCase("да"));
-
-			if (!"да".equalsIgnoreCase(answer) && !"нет".equalsIgnoreCase(answer)){
-				System.out.println("Хотите продолжить? [да/нет]");
-				answer = scn.next();
-			}
+			} while (!answer.equalsIgnoreCase("да") && !answer.equalsIgnoreCase("нет"));
 		} while (answer.equalsIgnoreCase("да"));
+
+		System.out.println("Игра окончена!");
 	}
 }
