@@ -13,14 +13,10 @@ public class GuessNumber {
 		Scanner scan = new Scanner(System.in);
 		int randomNumber = (int) (1 + Math.random() * 100);
 
-		do {
+		while (true); {
 			System.out.println(p1.getName() + ", введите свое число");
 			p1.setNumber(scan.nextInt());
 			System.out.println(p1.getName() + " ввел число - " + p1.getNumber());
-
-			System.out.println(p2.getName() + ", введите свое число");
-			p2.setNumber(scan.nextInt());
-			System.out.println(p2.getName() + " ввел число - " + p2.getNumber());
 
 			if (p1.getNumber() < randomNumber) {
 				System.out.println("Введеное вами число " + p1.getNumber() + " меньше того, которое загадал компьютер");
@@ -31,6 +27,10 @@ public class GuessNumber {
 				break;
 			}
 
+			System.out.println(p2.getName() + ", введите свое число");
+			p2.setNumber(scan.nextInt());
+			System.out.println(p2.getName() + " ввел число - " + p2.getNumber());
+
 			if (p2.getNumber() < randomNumber) {
 				System.out.println("Введеное вами число " + p2.getNumber() + " меньше того, которое загадал компьютер");;
 			} else if (p2.getNumber() > randomNumber) {
@@ -39,6 +39,7 @@ public class GuessNumber {
 				System.out.println("Игрок по имени " + p2.getName() + " победил! " + p2.getName() + " угадал число - " + p2.getNumber());
 				break;	
 			}
-		} while (p1.getNumber() != randomNumber && p2.getNumber() != randomNumber);
+			break;
+		}
 	}
 }
