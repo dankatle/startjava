@@ -15,7 +15,7 @@ public class GuessNumber {
 		Scanner scan = new Scanner(System.in);
 		int randomNumber = (int) (1 + Math.random() * 100);
 
-		while (true); {
+		while (true) {
 			System.out.println(p1.getName() + ", введите свое число");
 			p1.setNumber(scan.nextInt());
 			System.out.println(p1.getName() + " ввел число - " + p1.getNumber());
