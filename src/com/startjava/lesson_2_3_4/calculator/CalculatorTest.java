@@ -9,12 +9,12 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
 
         String answer;
-        String math;
+        String mathExpression;
 
         do {
             System.out.print("Введите математичское выражение (пример: 2 + 2): " + " ");
-            math = scn.nextLine();
-            calc.calculate(math);
+            mathExpression = scn.nextLine();
+            calc.calculate(mathExpression);
 
             do {
                 System.out.println("Хотите продолжить? [да/нет]");
