@@ -9,8 +9,6 @@ public class GuessNumber {
 	private int randomNumber = (int) (1 + Math.random() * 100);
 	private Scanner scan = new Scanner(System.in);
 
-
-
 	public GuessNumber(Player p1, Player p2) {
 		this.p1 = p1;
 		this.p2 = p2;
@@ -39,7 +37,6 @@ public class GuessNumber {
 
 			compareNumbers(p1);
 			compareNumbers(p2);
-
 		}
 
 		if (p1.getNumber() != randomNumber && p2.getNumber() != randomNumber) {
