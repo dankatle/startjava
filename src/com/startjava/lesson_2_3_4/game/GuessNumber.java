@@ -55,11 +55,9 @@ public class GuessNumber {
 	}
 
 	private void sayEnteredNumbers(Player player, int a) {
-		System.out.println(player.getName() + " назвал цифры: ");
+		System.out.print(player.getName() + " назвал цифры: ");
 		int[] enteredNumbers = Arrays.copyOf(player.getEnteredNumbers(), a);
-		for (int num : enteredNumbers) {
-			System.out.print(num + " ");
-		}
+		System.out.print(Arrays.toString(enteredNumbers) + " ");
 		Arrays.fill(enteredNumbers, 0);
 	}
 
