@@ -1,20 +1,24 @@
 package com.startjava.lesson_2_3_4.game;
 
+import java.util.Arrays;
+
 public class Player {
     private String name;
     private int number;
     private int[] enteredNumbers = new int[10];
-
-    public int[] getEnteredNumbers() {
-        return enteredNumbers;
-    }
-
-    public void setEnteredNumbers(int a) {
-        this.enteredNumbers[a] = number;
-    }
+    private int counter;
+    private boolean win;
 
     public Player(String name) {
         this.name = name;
+    }
+
+    public int[] getEnteredNumbers() {
+        return Arrays.copyOf(enteredNumbers, counter);
+    }
+
+    public void setEnteredNumbers(int i) {
+        this.enteredNumbers[i] = number;
     }
 
     public String getName() {
@@ -31,5 +35,14 @@ public class Player {
 
     public void setNumber(int number) {
         this.number = number;
+        counter++;
+    }
+
+    public void setWin(boolean win) {
+        this.win = win;
+    }
+
+    public boolean getWin() {
+        return win;
     }
 }

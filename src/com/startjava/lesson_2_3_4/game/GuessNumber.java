@@ -15,54 +15,49 @@ public class GuessNumber {
 	}
 
 	public void startGame() {
-
 		System.out.println("Игра началась");
 
 		for (int i = 0; i < 10; i++) {
 			System.out.println("У вас осталось " + (10 - i) + " попыток");
 
-			enteredNumbers(p1, i);
-			if (p1.getNumber() == randomNumber) {
-				System.out.println("Игрок " + p1.getName() + " угадал число " + p1.getNumber() + " с " + i + " попытки");
-				sayEnteredNumbers(p1, i);
-				break;
-			}
+			inputNumbers(p1, i);
+			compareNumbers(p1, i);
+			if (p1.getWin()) break;
 
-			enteredNumbers(p2, i);
-			if (p2.getNumber() == randomNumber) {
-				System.out.println("Игрок " + p2.getName() + " угадал число " + p2.getNumber() + " с " + i + " попытки");
-				sayEnteredNumbers(p2, i);
-				break;
-			}
-
-			compareNumbers(p1);
-			compareNumbers(p2);
+			inputNumbers(p2, i);
+			compareNumbers(p2, i);
+			if (p2.getWin()) break;
 		}
 
 		if (p1.getNumber() != randomNumber && p2.getNumber() != randomNumber) {
 			System.out.println(p1.getName() + ", у вас закончились попытки");
 			System.out.println(p2.getName() + ", у вас закончились попытки");
+			clearEnteredNumbers(p1);
+			clearEnteredNumbers(p2);
 		}
 	}
 
-	private void enteredNumbers(Player player, int a) {
+	private void inputNumbers(Player player, int i) {
 		System.out.println(player.getName() + " введите число");
 		player.setNumber(scan.nextInt());
-		player.setEnteredNumbers(a);
+		player.setEnteredNumbers(i);
 	}
 
-	private void sayEnteredNumbers(Player player, int a) {
-		System.out.print(player.getName() + " назвал цифры: ");
-		int[] enteredNumbers = Arrays.copyOf(player.getEnteredNumbers(), a);
-		System.out.print(Arrays.toString(enteredNumbers) + " ");
-		Arrays.fill(enteredNumbers, 0);
+	private void printEnteredNumbers(Player player) {
+		System.out.print(player.getName() + " назвал цифры: " + Arrays.toString(player.getEnteredNumbers()));
 	}
 
-	private void compareNumbers(Player player) {
-		if (player.getNumber() < randomNumber) {
-			System.out.println(player.getName() + ", ваше число меньше того, которое загадал компьюетр");
+	private void clearEnteredNumbers(Player player) {
+		Arrays.fill(player.getEnteredNumbers(), 0);
+	}
+	private void compareNumbers(Player player, int i) {
+		if (player.getNumber() == randomNumber) {
+			System.out.println("Игрок " + player.getName() + " угадал число " + player.getNumber() + " с " + i + " попытки");
+			player.setWin(true);
 		} else if(player.getNumber() > randomNumber) {
 			System.out.println(player.getName() + ", ваше число больше того, которое загадал компьюетр");
+		} else if (player.getNumber() < randomNumber) {
+			System.out.println(player.getName() + ", ваше число меньше того, которое загадал компьюетр");
 		}
 	}
 }
