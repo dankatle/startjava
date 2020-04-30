@@ -14,8 +14,8 @@ public class Variable {
 
 		System.out.println(coreProcessor);
 		System.out.println(threadsProcessor);
-		System.out.println(sizeRAM);
-		System.out.println(maxSizeSsdInGb);
+		System.out.println(sizeRam);
+		System.out.println(maxSizeSsdGb);
 		System.out.println(maxFrequencyCpu);
 		System.out.println(minFrequencyCpu);
 		System.out.println(markingIntelCpu);

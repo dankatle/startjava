@@ -1,18 +1,18 @@
-package com.startjava.lesson_2_3.person;
+package com.startjava.lesson_2_3_4.person;
 
 public class Person {
 
 	String name = "John";
 	float height = 2.05f;
 	float weight = 80f;
-	char gender = "M";
+	char gender = 'M';
 
 	void go() {
 		System.out.println("Начал движение");
 	}
 
 	void sitDown() {
-		System.out.println("Я присел!")
+		System.out.println("Я присел!");
 	}
 
 	boolean run() {
