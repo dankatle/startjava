@@ -4,21 +4,11 @@ import java.util.Arrays;
 
 public class Player {
     private String name;
-    private int number;
     private int[] enteredNumbers = new int[10];
     private int counter;
-    private boolean win;
 
     public Player(String name) {
         this.name = name;
-    }
-
-    public int[] getEnteredNumbers() {
-        return Arrays.copyOf(enteredNumbers, counter);
-    }
-
-    public void setEnteredNumbers(int i) {
-        this.enteredNumbers[i] = number;
     }
 
     public String getName() {
@@ -29,20 +19,20 @@ public class Player {
         this.name = name;
     }
 
-    public int getNumber() {
-        return number;
+    public int[] getEnteredNumbers() {
+        return Arrays.copyOf(enteredNumbers, counter);
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setEnteredNumber(int number) {
+        this.enteredNumbers[counter] = number;
         counter++;
     }
 
-    public void setWin(boolean win) {
-        this.win = win;
+    public int getLastEnteredNumber() {
+        return enteredNumbers[counter-1];
     }
 
-    public boolean getWin() {
-        return win;
+    public void ClearArr() {
+        Arrays.fill(enteredNumbers, 0);
     }
 }
