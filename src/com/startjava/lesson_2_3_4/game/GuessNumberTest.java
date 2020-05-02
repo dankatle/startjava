@@ -21,7 +21,6 @@ public class GuessNumberTest {
 
 		do {
 			guess.startGame();
-			
 			do {
 				System.out.println("Хотите продолжить? [да/нет]");
 				answer = scn.next();
