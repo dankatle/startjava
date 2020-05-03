@@ -20,7 +20,7 @@ public class Player {
     }
 
     public void setEnteredNumber(int number) {
-        this.enteredNumbers[attempt] = number;
+        enteredNumbers[attempt] = number;
         attempt++;
     }
 
@@ -34,5 +34,9 @@ public class Player {
 
     public void setAttempt(int attempt) {
         this.attempt = attempt;
+    }
+
+    public void clear() {
+        Arrays.fill(enteredNumbers, 0, getAttempt(), 0);
     }
 }
